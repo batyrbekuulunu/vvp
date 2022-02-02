@@ -1,108 +1,108 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-  1. Поменять местами содержимое переменных A и B и вывести новые
-значения A и B.
+1. Дано значение угла α в градусах (0 < α < 360). Определить значение этого же угла в радианах, учитывая, что 180◦ = π радианов.
+
+#include <iostream>              
+using namespace std;
 #include <math.h>
 int main() {
-// int A = 5;
-// int B = 2;
-// int C = A;
-// A = B;
-// B = C;
-// std::cout << "A = " << A << "\n";
-// std::cout << "B = " << B << "\n";
-}
-2. Даны переменные A, B, C. Изменить их значения, переместив содержимое
-A в B, B — в C, C — в A, и вывести новые значения переменных A, B, C.
+  
+  float p = 3.14;
+ float a;
+ float B = 1;
+ cin >> a;
+ B = a / 180;
+
+ cout << B * p << "\n";
+ 
+ return 0;
+} 
+
+
+2. Дан диаметр окружности d. Найти ее длину L = π•d. В качестве
+значения π использовать 3.14.
 #include <iostream>
-int main2(){
-int A = 6;
-int B = 4;
-int C = 8;
-int temp1 = B;
-B = A;
-int temp2 = C;
-C = temp1;
-A = temp2;
- std::cout << "A = " << A << "\n";
- std::cout << "B = " << B << "\n";
- std::cout << "C = " << C << "\n";
-}
-3. Даны переменные A, B, C. Изменить их значения, переместив содержимое
-A в C, C — в B, B — в A, и вывести новые значения переменных A, B, C.
-#include <iostream>
-int main3(){
-int A = 6;
-int B = 4;
-int C = 8;
-int temp1 = B;
-B = A;
-int temp2 = C;
-C = temp1;
-A = temp2;
- std::cout << "A = " << A << "\n";
- std::cout << "B = " << B << "\n";
- std::cout << "C = " << C << "\n";
-}
-4. Найти значение функции y = 3x6
- − 6x2
- − 7 при данном значении x
-#include <iostream>
+using namespace std;
 #include <math.h>
-int main4(){
-int X = 3;
-int y = 3 * pow(X,6) - 6 * pow(X,2) - 7;
- std::cout << y;
-}
-5. Найти значение функции y = 4(x−3)6
- − 7(x−3)3
- + 2 при данном значении x
-#include <iostream>
-#include <math.h>
-int main5(){
-int X = 5;
-int y = 4 * pow(X-3,6) - 7 * pow (X-3,3) + 2;
- std::cout << y;
-}
-6. Дано число A. Вычислить A8
- , используя вспомогательную переменную и
-три операции умножения.
-#include <iostream>
-#include <math.h>
-int main6()
-{
-int A = 8;
-int B = A * A;
- B = B * B;
- B = B * B;
- std::cout << B << "\n";
- B = A * A;
- std::cout << B << "\n";
- B = B * B;
- std::cout << B << "\n";
- B = B * B;
-}
-7. Дано число A. Вычислить A15
-, используя две вспомогательные переменные
-и пять операций умножения.
-#include <iostream>
-#include <math.h>
-int main7()
-{
-int A = 15;
-int B = A * A;
- B = B * B;
- B = B * B;
-int C = B * B;
- C = B * C;
- std::cout << B << "\n";
- B = A * A;
- std::cout << B << "\n";
- B = B * B;
- std::cout << B << "\n";
- B = B * B;
- std::cout << B << "\n";
- C = B * B;
- std::cout << B << "\n";
+
+int main2() {
+  
+  int P = 180;
+  float a = P / 2;
+  
+  cout << a;
 }
 
+
+3. Известно, что X кг конфет стоит A рублей. Определить, сколько стоит 1 кг и Y кг этих же конфет.
+
+#include <iostream>
+using namespace std;
+#include <math.h>
+
+int main3(){
+  int x = 5;
+  int A = 500;
+  float A1=A/5;
+  int Y1 = 7;
+  int Y = Y1 *A;
+  cout << A1;
+  cout << Y;
+  
+}
+
+
+4. Скорость первого автомобиля V1 км/ч, второго — V2 км/ч, расстояние между ними S км. Определить расстояние между ними через T часов, если автомобили удаляются друг от друга. 
+#include <iostream>
+using namespace std;
+#include <math.h>
+
+int main4(){
+
+  int V1 = 60;
+  int V2 = 70;
+  int S = V2 - V1;
+  int T = 3;
+  int S1 = S * T;
+  cout << S;
+  
+  cout << S1;
+  
+
+}
+
+
+5. Решить линейное уравнение A•x + B = 0, заданное своими коэффициентами A и B (коэффициент A не равен 0).
+#include <iostream>
+using namespace std;
+#include <math.h>
+
+int main5(){
+  //A*x+B=0;
+  int A =4;
+  int B = 8;
+  int x = (-B)+(-A);
+  cout << x;
+}
+
+
+6. Найти решение системы линейных уравнений вида 
+A1•x + B1•y = C1, 
+#include <iostream>
+using namespace std;
+#include <math.h>
+
+int main6(){
+  //A1*x+B1*y=C1;
+  //A2*x+B2*y=C2;
+  int A1 = 8;
+  int B1 = 4;
+  int C1 = 7;
+  int A2 = 2;
+  int B2 = 6;
+  int C2 = 9;
+   int y = C1 -B1 -A1*y;
+   int x = C2 -B2 -A2*x;
+  cout << y;
+  cout << x;
+}
