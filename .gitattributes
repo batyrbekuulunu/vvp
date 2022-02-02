@@ -1,108 +1,86 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-1. Дано значение угла α в градусах (0 < α < 360). Определить значение этого же угла в радианах, учитывая, что 180◦ = π радианов.
-
-#include <iostream>              
-using namespace std;
+Даны стороны прямоугольника a и b Найдите площадь S = a * b и периметр
+S = 2 * (a + b).
+#include <iostream>
+int main() {
+int a, b, P, S;
+a = 5;
+b = 6;
+P = 2 * (a + b);
+S = a * b;
+ std::cout << "a = " << a << std::endl;
+std::cout << "b = " << b << std::endl;
+std::cout << "S = a * b = " << S << std::endl;
+std::cout << "P = 2 * (a + b) = " << P << std::endl;
+ return 0;
+}
+Дан периметр окружности d Найти ее длину L=π*d значение
+π использовать 3.14.
+#include <iostream>
+int main() {
+ const float Pi = 3.14;
+int d = 8;
+ float L = Pi * d;
+ std::cout << "d = " << d << std::endl;
+ std::cout << "L = Pi * d = " << L << std::endl;
+ return 0;
+}
+Даны два числа a и b. Найти их среднее арифметическое: (a + b)/2.
+#include <iostream>
+int main() {
+ int a, b;
+ a = 25;
+ b = 30;
+ float avg = (a + b) / 2;
+ std::cout << "a = " << a << std::endl;
+ std::cout << "b = " << b << std::endl;
+ std::cout << "Average = (a + b) / 2 = " << avg << std::endl;
+return 0
+Даны два ненулевых числа. Найти сумму, разность, и частное их кадров.
+#include <iostream>
+int main() {
+ int a, b, a2, b2, sum, sub, mul;
+ float div;
+ a = 30;
+ b = 10;
+ a2 = a * a;
+ b2 = b * b;
+ sum = a2 + b2;
+ sub = a2 - b2;
+ mul = a2 * b2;
+ div = a2 / b2;
+ std::cout << "a = " << a << std::endl;
+ std::cout << "a^2 = " << a2 << std::endl;
+ std::cout << "b = " << b << std::endl;
+ std::cout << "b^2 = " << b2 << std::endl;
+ std::cout << "a^2 + b^2 = " << sum << std::endl;
+ std::cout << "a^2 - b^2 = " << sub << std::endl;
+ std::cout << "a^2 * b^2 = " << mul << std::endl;
+ std::cout << "a^2 / b^2 = " << div << std::endl;
+ return 0;
+}
+Даны два нулевых числа. Найти сумму, разность, произведение и частное их модулей.
+#include <iostream>
 #include <math.h>
 int main() {
-  
-  float p = 3.14;
- float a;
- float B = 1;
- cin >> a;
- B = a / 180;
-
- cout << B * p << "\n";
- 
+ int a, a_abs, b, b_abs, sum, sub, mul;
+ float div;
+ a = 50;
+ b = -40;
+ a_abs = abs(a);
+ b_abs = abs(b);
+ sum = a_abs + b_abs;
+ sub = a_abs - b_abs;
+ mul = a_abs * b_abs;
+ div = a_abs / b_abs;
+ std::cout << "a = " << a << std::endl;
+ std::cout << "|a| = " << a_abs << std::endl;
+ std::cout << "b = " << b << std::endl;
+ std::cout << "|b| = " << b_abs << std::endl;
+ std::cout << "|a| + |b| = " << sum << std::endl;
+ std::cout << "|a| - |b| = " << sub << std::endl;
+ std::cout << "|a| * |b| = " << mul << std::endl;
+ std::cout << "|a| / |b| = " << div << std::endl;
  return 0;
-} 
-
-
-2. Дан диаметр окружности d. Найти ее длину L = π•d. В качестве
-значения π использовать 3.14.
-#include <iostream>
-using namespace std;
-#include <math.h>
-
-int main2() {
-  
-  int P = 180;
-  float a = P / 2;
-  
-  cout << a;
-}
-
-
-3. Известно, что X кг конфет стоит A рублей. Определить, сколько стоит 1 кг и Y кг этих же конфет.
-
-#include <iostream>
-using namespace std;
-#include <math.h>
-
-int main3(){
-  int x = 5;
-  int A = 500;
-  float A1=A/5;
-  int Y1 = 7;
-  int Y = Y1 *A;
-  cout << A1;
-  cout << Y;
-  
-}
-
-
-4. Скорость первого автомобиля V1 км/ч, второго — V2 км/ч, расстояние между ними S км. Определить расстояние между ними через T часов, если автомобили удаляются друг от друга. 
-#include <iostream>
-using namespace std;
-#include <math.h>
-
-int main4(){
-
-  int V1 = 60;
-  int V2 = 70;
-  int S = V2 - V1;
-  int T = 3;
-  int S1 = S * T;
-  cout << S;
-  
-  cout << S1;
-  
-
-}
-
-
-5. Решить линейное уравнение A•x + B = 0, заданное своими коэффициентами A и B (коэффициент A не равен 0).
-#include <iostream>
-using namespace std;
-#include <math.h>
-
-int main5(){
-  //A*x+B=0;
-  int A =4;
-  int B = 8;
-  int x = (-B)+(-A);
-  cout << x;
-}
-
-
-6. Найти решение системы линейных уравнений вида 
-A1•x + B1•y = C1, 
-#include <iostream>
-using namespace std;
-#include <math.h>
-
-int main6(){
-  //A1*x+B1*y=C1;
-  //A2*x+B2*y=C2;
-  int A1 = 8;
-  int B1 = 4;
-  int C1 = 7;
-  int A2 = 2;
-  int B2 = 6;
-  int C2 = 9;
-   int y = C1 -B1 -A1*y;
-   int x = C2 -B2 -A2*x;
-  cout << y;
-  cout << x;
 }
